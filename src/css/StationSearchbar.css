@@ -1,0 +1,44 @@
+.lineBubble {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 0.1em;
+}
+
+h4 {
+  padding-right: 10px;
+}
+
+.react-autosuggest__container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.react-autosuggest__input {
+  width: 80vw;
+  height: 3em;
+  border: none;
+  border-radius: 10px;
+  padding-left: 1em;
+
+  font-size: 15px;
+}
+
+.react-autosuggest__suggestion {
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  border-bottom: 1px solid grey;
+}
+
+.react-autosuggest__suggestion:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: none;
+}
+
+.SuggestionRow {
+  display: flex;
+  align-items: center;
+}
