@@ -15,6 +15,3 @@ const lines = [{
     color: '#69BD47'
  }    
 ]
-// Green #69BD47
-// Blue #0093D0
-// Gold #FFA500
