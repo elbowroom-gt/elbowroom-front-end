@@ -9,8 +9,10 @@ function Button (props) {
     return (<button
         key={props.name}
         className="lineBubble"
-        style={{ "background-color":  props.color }}
+        style={{ "background-color":  props.color,
+                'opacity':props.transparency}}
         onClick = {() => props.onClick(props.name)}
+       
       ></button>)
     }
 
@@ -18,10 +20,22 @@ function Button (props) {
  
 
 class Line extends Component{
-    
+   constructor(){
+       super()
+       this.state = {
+           currentSelection: null,
+           lines: {lines}
+       }
+
+    }
+
+       
+   
     
     handleClick(name){
         //work on this. CSS for this is in StationSearch.css
+        this.setState({currentSelection: name})
+        
         return;
     }
 
@@ -29,7 +43,9 @@ class Line extends Component{
         let arr = []
         lines.forEach(element => arr.push(<Button name = {element.name}
             color = {element.color}
-            onClick = {(name) => this.handleClick(name)} />))
+            onClick = {(name) => this.handleClick(name)}
+            transparency = {(this.state.currentSelection == null || this.state.currentSelection == element.name ? 1 : .5) } />))
+        
          
     return (arr);
        
