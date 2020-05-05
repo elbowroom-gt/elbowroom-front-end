@@ -1,0 +1,48 @@
+.buttonGroup {
+    margin: 0 auto;
+    display: block;
+  }
+
+.noSelectedButton {
+    background-color:lightgrey;
+    border: blueviolet;
+    color: black;
+    padding: 15px  ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(206, 206, 206, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.noSelectedButton:active {
+    background-color: lightblue;
+    box-shadow: 0 5px rgb(170, 170, 170);
+    transform: translateY(4px);
+}
+
+.selectedButton {
+    background-color: rgb(134, 197, 206);
+    border: blueviolet;
+    color: black;
+    padding: 15px  ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(206, 206, 206, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.divider{
+    width:10px;
+    height:auto;
+    display:inline-block;
+}
+  
+h4 {
+    padding-right: 10px;
+}
+
+  
