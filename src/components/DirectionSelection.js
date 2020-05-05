@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-// import reactDOM from "react-dom";
 import { Button } from 'react-bootstrap';
-// import ToggleButton from 'react-bootstrap/ToggleButton'
-// import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
-// import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import "../css/DirectionSelection.css";
 
 
