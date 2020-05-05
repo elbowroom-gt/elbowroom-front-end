@@ -2,6 +2,7 @@ import React from "react";
 import StationSearchbar from "./StationSearchbar";
 import PopTrackerNavBar from "./PopTrackerNavBar";
 import Linechooser from "./Linechooser";
+import Line from "./Line";
 
 import "../css/App.css";
 import backgroundImg from "../images/backgroundSubway.jpeg";
@@ -15,7 +16,7 @@ function App() {
       <StationSearchbar />
       <hr />
       <h4 className="number">2) Choose a Line</h4>
-      <Linechooser />
+      <Line />
     </div>
   );
 }
