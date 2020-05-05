@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import Autosuggest from "react-autosuggest";
 import "../css/StationSearchbar.css";
 
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  chooseStation,
+  selectLine,
+} from "../app/appstateSlice";
+
 // Imagine you have a list of stations that you'd like to autosuggest.
 import { stations } from "./MARTAStations";
 
@@ -9,12 +15,13 @@ import { stations } from "./MARTAStations";
 const getSuggestions = (value) => {
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
+  const line = useSelector(selectLine);
 
-  return inputLength === 0
+  return inputLength === 0 || line === null
     ? []
     : stations.filter(
         (station) =>
-          station.name.toLowerCase().slice(0, inputLength) === inputValue
+          station.name.toLowerCase().slice(0, inputLength) === inputValue && station.lines.includes(line)
       );
 };
 

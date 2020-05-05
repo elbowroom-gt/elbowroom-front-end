@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const appstateSlice = createSlice({
     name: "appstate",
     initialState: {
-        selectedLines: new Set(),
+        selectedLines: null,
         selectedStation: null,
         selectedDirection: null,
     },
