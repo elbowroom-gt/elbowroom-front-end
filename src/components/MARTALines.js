@@ -8,10 +8,11 @@ const lines = [{
  },
  {
     name: 'Blue',
-    color: '#EC2527'
+    color: '#0093D0'
 },
  {
     name: 'Gold',
-    color: '#69BD47'
+    color: '#FFA500'
  }    
 ]
+module.exports = { lines };
