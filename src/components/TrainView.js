@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TrainCarView from "./TrainCarView";
 import "../css/TrainView.css";
 
-const trains = [
+let trains = [
   {
     timeTillArrival: 4,
     cars: [34, 12, 46, 84, 24],
@@ -29,13 +29,29 @@ const trains = [
   },
 ];
 
+// trains = [];
+
 class TrainView extends Component {
   render() {
     return (
-      <div className="trainViewMain">
-        {trains.map((e) => {
-          return <TrainCarView {...e} />;
-        })}
+      <div>
+        <div className="legend">
+          {[0, 20, 40, 60, 80, 100].map((e) => {
+            const color = `rgb(${89 * ((100 - e) / 100) + 175 * (e / 100)},${
+              183 * ((100 - e) / 100) + 25 * (e / 100)
+            },${58 * ((100 - e) / 100) + 22 * (e / 100)})`;
+            return (
+              <div className="legendItem" style={{ backgroundColor: color }}>
+                {e}
+              </div>
+            );
+          })}
+        </div>
+        <div className="trainViewMain">
+          {trains.map((e) => {
+            return <TrainCarView {...e} />;
+          })}
+        </div>
       </div>
     );
   }

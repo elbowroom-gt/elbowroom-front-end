@@ -9,7 +9,6 @@ class TrainCarView extends Component {
           <b>{this.props.timeTillArrival}</b> minutes
         </p>
         <div className="train">
-          &lt;
           {this.props.cars.map((e) => {
             // Green = (89, 183, 58)
             // Red = (175, 25, 22)
