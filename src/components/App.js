@@ -13,17 +13,17 @@ function App() {
     <div className="App">
       <img src={backgroundImg} alt="background" className="backgroundImg" />
       <PopTrackerNavBar />
-      <h4 className="number">1) Choose a Line</h4>
+      <h4 className="number">1) Choose a Line.</h4>
       <Line />
       <hr />
-      <h4 className="number">2) Choose your Station</h4>
+      <h4 className="number">2) Choose your Station.</h4>
       <StationSearchbar />
       <hr />
       <h4 className="number">3) Choose your direction of travel.</h4>
       <DirectionSelection />
       <hr />
       <hr />
-      <h4 className="number">4) Check the Trains Capacity</h4>
+      <h4 className="number">4) Upcoming Train Densities.</h4>
       <TrainView />
     </div>
   );
