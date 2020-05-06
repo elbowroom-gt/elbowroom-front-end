@@ -1,7 +1,6 @@
 import React from "react";
 import StationSearchbar from "./StationSearchbar";
 import PopTrackerNavBar from "./PopTrackerNavBar";
-import Linechooser from "./Linechooser";
 import DirectionSelection from "./DirectionSelection";
 import Line from "./Line";
 import TrainView from "./TrainView";

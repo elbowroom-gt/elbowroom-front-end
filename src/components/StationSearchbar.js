@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import Autosuggest from "react-autosuggest";
 import "../css/StationSearchbar.css";
 
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  chooseStation,
+  selectLine,
+} from "../app/appstateSlice";
+
 // Imagine you have a list of stations that you'd like to autosuggest.
 import { stations } from "./MARTAStations";
 
