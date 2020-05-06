@@ -1,0 +1,32 @@
+.trainCarView {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 3em;
+  background-color: rgb(209, 209, 209);
+}
+
+.trainCarView:nth-child(odd) {
+  background-color: rgb(221, 221, 221);
+}
+
+p {
+  margin-left: 1em;
+}
+
+.train {
+  display: flex;
+  margin-right: 1em;
+}
+
+.car {
+  height: 1em;
+  width: 1em;
+  margin: 0.1em;
+}
+
+.car:first-child {
+  border-top-left-radius: 100%;
+}

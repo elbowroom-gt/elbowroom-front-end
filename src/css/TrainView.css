@@ -1,0 +1,38 @@
+.trainViewMain {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  width: 80vw;
+  min-height: 3em;
+  max-height: 14em;
+  box-shadow: 0 1px 0.5em rgb(134, 134, 134);
+
+  border-radius: 10px;
+
+  background-color: rgb(221, 221, 221);
+}
+
+.legend {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.legendItem {
+  margin: 0.1em;
+  padding: 0.1em;
+  min-width: 2em;
+  display: flex;
+  justify-content: center;
+
+  border-radius: 10%;
+
+  color: white;
+  font-size: 13px;
+}
+
+.legendItem:last-child {
+  margin-right: 0.5em;
+}
