@@ -1,5 +1,3 @@
-import Papa from 'papaparse';
-
 import { lines } from "./MARTALines";
 import React from "react";
 
@@ -20,10 +18,10 @@ const Line = function() {
     lines.forEach(element => arr.push(
         <Button 
             type="primary" 
-            shape="circle" 
             onClick = {() => dispatch(chooseLine(element.name))} 
             style={{ "background-color":  element.color, 
-                    "opacity": (current_line !== null && current_line !== element.name) ? 0.5 : 1}}>
+                    "opacity": (current_line !== null && current_line !== element.name) ? 0.5 : 1,
+                    "borderRadius": "50%"}}>
             {element.name}
         </Button>
     ))
