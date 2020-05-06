@@ -15,13 +15,12 @@ import { stations } from "./MARTAStations";
 const getSuggestions = (value) => {
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
-  const line = useSelector(selectLine);
 
-  return inputLength === 0 || line === null
+  return inputLength === 0
     ? []
     : stations.filter(
         (station) =>
-          station.name.toLowerCase().slice(0, inputLength) === inputValue && station.lines.includes(line)
+          station.name.toLowerCase().slice(0, inputLength) === inputValue
       );
 };
 
