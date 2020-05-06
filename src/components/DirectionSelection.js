@@ -25,7 +25,7 @@ class DirectionSelection extends Component {
    return (
     <ButtonGroup className="buttonGroup">
       <Button className = "noSelectedButton" onClick={this.toggleClass}>Uptown</Button>
-      <div className="divider"/>
+      <div className="horizontalDivider"/>
       <Button className = "noSelectedButton" onClick={this.toggleClass}>Downtown</Button>
     </ButtonGroup>
 
