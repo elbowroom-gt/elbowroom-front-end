@@ -3,7 +3,7 @@ import StationSearchbar from "./StationSearchbar";
 import PopTrackerNavBar from "./PopTrackerNavBar";
 import Linechooser from "./Linechooser";
 import DirectionSelection from "./DirectionSelection";
-
+import Line from "./Line";
 import "../css/App.css";
 import backgroundImg from "../images/backgroundSubway.jpeg";
 
