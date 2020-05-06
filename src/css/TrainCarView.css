@@ -26,3 +26,7 @@ p {
   width: 1em;
   margin: 0.1em;
 }
+
+.car:first-child {
+  border-top-left-radius: 100%;
+}
