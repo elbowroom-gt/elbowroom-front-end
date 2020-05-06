@@ -6,15 +6,23 @@ import Autosuggest from "react-autosuggest";
 
 
 function Button (props) {
-    return (<button
+    return (<div><button
         key={props.name}
         className="lineBubble"
         style={{ "background-color":  props.color,
                 'opacity':props.transparency}}
         onClick = {() => props.onClick(props.name)}
        
-      ></button>)
+      ></button></div>)
     }
+function ClearSelection (props) {
+    return(<div><button
+        key = {'clear'}
+        className = 'lineBubble'
+        style = {{"background-color": '#FFF'}}
+        onClick = {() => props.onClick(null)}
+        >clear</button></div>)
+}
 
 
  
@@ -41,13 +49,15 @@ class Line extends Component{
 
     render() {
         let arr = []
+        
         lines.forEach(element => arr.push(<Button name = {element.name}
             color = {element.color}
             onClick = {(name) => this.handleClick(name)}
             transparency = {(this.state.currentSelection == null || this.state.currentSelection == element.name ? 1 : .5) } />))
         
-         
-    return (arr);
+        arr.push(<ClearSelection onClick = {(name) => this.handleClick(name)}
+        ></ClearSelection>)
+    return (<section className= 'container'>{arr}</section>);
        
     }
 
