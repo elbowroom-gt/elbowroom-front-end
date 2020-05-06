@@ -37,9 +37,6 @@ class Line extends Component{
 
     }
 
-       
-   
-    
     handleClick(name){
         //work on this. CSS for this is in StationSearch.css
         this.setState({currentSelection: name})

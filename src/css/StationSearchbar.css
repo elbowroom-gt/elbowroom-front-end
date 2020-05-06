@@ -7,13 +7,14 @@
   padding: 0.1em;
   opacity: 1;
 }
+
 .container {
   align-content: stretch;
   display:grid;
   grid-auto-flow: row  ;
   grid-auto-rows: 13vw ;
-  grid-template-columns: repeat(6, 13vw);
-  grid-template-rows: repeat(auto-fill,13vw);
+  grid-template-columns: repeat(6, min(13vw, 80px));
+  grid-template-rows: repeat(auto-fill,min(13vw, 80px));
   
 
 }
