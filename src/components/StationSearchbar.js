@@ -9,6 +9,25 @@ import { MTAStations } from "./MTAStations";
 import { MARTALines } from "./MARTALines";
 import { MTALines } from "./MTALines";
 
+function compareStations(a, b) {
+  //for sorting purposes
+  const isStreetRegex = /\d[a-zA-Z][a-zA-Z]\sSt/g;
+  const extractStreet = /[+-]?\d+(?:\.\d+)?/g;
+  const aNum = a.name.match(isStreetRegex) !== null;
+  const bNum = b.name.match(isStreetRegex) !== null;
+  if (aNum && bNum) {
+    return (
+      parseInt(b.name.match(extractStreet)[0]) -
+      parseInt(a.name.match(extractStreet)[0])
+    );
+  } else if (aNum && !bNum) {
+    return -1;
+  } else if (!aNum && bNum) {
+    return 1;
+  } else {
+    return a.name.localeCompare(b.name);
+  }
+}
 
 function renderStationMARTA(props, option, snapshot, className) {
   let lines = [];
@@ -71,6 +90,7 @@ const StationSearch = function() {
         lines: element[12].split("-").map(x => x.substring(0,1))
       })
     });
+    stations.sort((a,b) => compareStations(a,b));
   } else {
     stations = MARTAStations;
   }
