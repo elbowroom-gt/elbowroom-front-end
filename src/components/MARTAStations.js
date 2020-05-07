@@ -3,7 +3,7 @@
 // Blue #0093D0
 // Gold #FFA500
 
-const stations = [
+const MARTAStations = [
   {
     name: "Airport",
     value: "S7",
@@ -196,4 +196,4 @@ const stations = [
   },
 ];
 
-module.exports = { stations };
+module.exports = { MARTAStations };
