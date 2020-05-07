@@ -2,7 +2,8 @@ import React from "react";
 import { Button } from 'react-bootstrap';
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import "../css/DirectionSelection.css";
-import { lines } from "./MARTALines.js";
+import { MARTALines } from "./MARTALines.js";
+import { MTALines } from "./MTALines.js";
 import { useSelector, useDispatch } from 'react-redux';
 import { chooseDirection, selectDirection, selectLine } from '../app/appstateSlice';
 
@@ -14,6 +15,8 @@ const DirectionSelection = function() {
 
   let button1 = "Direction";
   let button2 = "Direction";
+
+  const lines = MTALines;
 
   lines.forEach(element => {
     if (element["name"] === currLine) {
