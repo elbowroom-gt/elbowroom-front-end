@@ -5,18 +5,24 @@ import "../css/DirectionSelection.css";
 import { MARTALines } from "./MARTALines.js";
 import { MTALines } from "./MTALines.js";
 import { useSelector, useDispatch } from 'react-redux';
-import { chooseDirection, selectDirection, selectLine } from '../app/appstateSlice';
+import { chooseDirection, selectSystem, selectDirection, selectLine } from '../app/appstateSlice';
 
 const DirectionSelection = function() {
 
   const dispatch = useDispatch();
   const direction = useSelector(selectDirection);
+  const system = useSelector(selectSystem);
   const currLine = useSelector(selectLine);
+
+  let lines = [];
+  if (system === "MTA") {
+    lines = MTALines;
+  } else {
+    lines = MARTALines;
+  }
 
   let button1 = "Direction";
   let button2 = "Direction";
-
-  const lines = MTALines;
 
   lines.forEach(element => {
     if (element["name"] === currLine) {

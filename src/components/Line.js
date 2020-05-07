@@ -3,20 +3,23 @@ import { MTALines } from "./MTALines";
 import React from "react";
 
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  chooseLine,
-  selectLine
-} from '../app/appstateSlice';
+import { chooseLine, selectLine, selectSystem } from '../app/appstateSlice';
 
 import {Button} from 'react-bootstrap';
 
 const Line = function() {
     const dispatch = useDispatch();
     const current_line = useSelector(selectLine);
+    const system = useSelector(selectSystem);
 
     let arr = []
 
-    const lines = MTALines;
+    let lines = [];
+    if (system === "MTA") {
+      lines = MTALines;
+    } else {
+      lines = MARTALines;
+    }
     
     lines.forEach(element => arr.push(
         <Button 
