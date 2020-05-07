@@ -1,21 +1,9 @@
-nav {
-  height: 3.5em;
+.navBar {
+  height: auto;
   width: 100%;
-
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-
+  align-items: center; 
+  justify-content: left;
   box-shadow: 0 1px 1em rgb(134, 134, 134);
-  margin-bottom: 2em;
-  background-color: white;
-}
-
-h1.name {
-  font-size: 25px;
-  font-weight: 300;
-}
-
-span.o {
-  color: rgb(68, 174, 216);
+  margin-bottom: 10px;
 }

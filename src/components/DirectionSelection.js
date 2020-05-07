@@ -27,9 +27,15 @@ const DirectionSelection = function() {
 
   return (
     <ButtonGroup className="buttonGroup">
-      <Button className = {direction === 1 ? "selectedButton" : "noSelectedButton"} onClick={() => dispatch(chooseDirection(1))} disabled={currLine === null}>{ button1 }</Button>
+      <Button className = {direction === 1 ? "selectedButton" : "noSelectedButton"} 
+        onClick={() => dispatch(chooseDirection(1))} 
+        disabled={currLine === null}>{ button1 }
+      </Button>
       <div className="horizontalDivider"/>
-      <Button className = {direction === -1 ? "selectedButton" : "noSelectedButton"} onClick={() => dispatch(chooseDirection(-1))} disabled={currLine === null}>{ button2 }</Button>
+      <Button className = {direction === -1 ? "selectedButton" : "noSelectedButton"} 
+      onClick={() => dispatch(chooseDirection(-1))} 
+      disabled={currLine === null}>{ button2 }
+      </Button>
     </ButtonGroup>
   );
 }
