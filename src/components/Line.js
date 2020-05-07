@@ -1,7 +1,7 @@
 import Papa from 'papaparse';
 
 import { lines } from "./MARTALines";
-HEAD
+
 
 import React from "react";
 
@@ -31,7 +31,7 @@ const Line = function() {
     ))
 
     return (<section className= 'container'>{arr}</section>)
-origin/redux
+
 }
 
 export default Line;
