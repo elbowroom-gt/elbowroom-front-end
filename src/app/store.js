@@ -3,6 +3,6 @@ import appstateReducer from "./appstateSlice"
 
 export default configureStore({
     reducer: {
-        appstate: appstateReducer,
+        transit: appstateReducer,
     }
 });

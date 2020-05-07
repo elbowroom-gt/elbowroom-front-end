@@ -28,8 +28,8 @@ export const transitSlice = createSlice({
 export const {chooseLine, chooseStation, chooseDirection} = transitSlice.actions;
 
 //These are selectors, they allow us to easily select a value from the state
-export const selectLine = state => state.appstate.selectedLines;
-export const selectStation = state => state.appstate.selectedStation;
-export const selectDirection = state => state.appstate.selectedDirection;
+export const selectLine = state => state.transit.selectedLines;
+export const selectStation = state => state.transit.selectedStation;
+export const selectDirection = state => state.transit.selectedDirection;
 
 export default transitSlice.reducer;
