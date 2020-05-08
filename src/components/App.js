@@ -8,7 +8,6 @@ import "../css/App.css";
 import TipButton from "./Tips";
 import "../css/tips.css";
 
-
 function App() {
 
   return (
@@ -26,7 +25,6 @@ function App() {
       <hr />
       <h4 className="number">Upcoming Train Densities. <TipButton message={trainTip}/></h4>
       <TrainView />
-      
     </div>
   );
   

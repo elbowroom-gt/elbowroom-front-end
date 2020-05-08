@@ -4,8 +4,7 @@ import SystemSelector from "./SystemSelector.js";
 import logo from "../images/elbowroomIcon3.png"
 
 
-
-const PopTrackerNavBar = function() {
+const PopTrackerNavBar = function () {
   return (
     <div className="navBar">
       <img src={ logo } alt="logo" className="logo" />
@@ -13,6 +12,6 @@ const PopTrackerNavBar = function() {
       <SystemSelector />
     </div>
   );
-}
+};
 
 export default PopTrackerNavBar;
