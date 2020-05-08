@@ -25,12 +25,7 @@ const Line = function() {
             id="line-button"
             onClick = {() => dispatch(chooseLine(element.name))} 
             style={{ "background-color":  element.color, 
-                    "opacity": (current_line !== null && current_line !== element.name) ? 0.5 : 1,
-                    "borderRadius": "50%",
-                    "border":"1.5px solid white",
-                    "color": "white",
-                    "font-family": "'Helvetica', 'Arial', sans-serif",
-                    "font-size": "110%"}}>
+                    "opacity": (current_line !== null && current_line !== element.name) ? 0.5 : 1}}>
             {element.displayName}
         </Button>
     ))
