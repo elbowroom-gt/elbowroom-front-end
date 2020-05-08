@@ -1,33 +1,35 @@
 import React from "react";
 import "../css/SystemSelector.css";
-import { Button } from "react-bootstrap"
-import { useDispatch } from 'react-redux';
-import { chooseSystem } from '../app/appstateSlice';
-import DropdownButton from 'react-bootstrap/DropdownButton'
-import Dropdown from 'react-bootstrap/Dropdown'
-
+import { useDispatch, useSelector } from 'react-redux';
+import { chooseSystem, selectSystem } from '../app/appstateSlice';
+import Select from 'react-select';
 
 const SystemSelector = function() {
 
     const dispatch = useDispatch();
+    const system = useSelector(selectSystem);
 
+    const systems = [
+        { label: "MTA", value: 1 },
+        { label: "MARTA", value: 2 },
+      ];
 
     return (
-        <div class="btn-group-vertical" className="dropdown">
-            <Button variant = "light"
-            onClick={() => dispatch(chooseSystem("MTA"))} >MTA</Button>
-            <div> </div>
-            <Button variant = "light"
-            onClick={() => dispatch(chooseSystem("MARTA"))}>MARTA</Button>
-        </div> 
-        // <div className="dropdown">
-        //     <Dropdown.Toggle variant="success" id="dropdown-basic">Select System</Dropdown.Toggle>
-        //     <Dropdown.Menu>
-        //         <Dropdown.Item >MTA</Dropdown.Item>
-        //         <Dropdown.Item >MARTA</Dropdown.Item>
-        //     </Dropdown.Menu>
-        // </div>
-    );
+
+        <div className="select">
+            <div className="row">
+            <div className="col-md-4"></div>
+            <div className="col-md-4">
+                <Select 
+                options={ systems }  
+                onChange={(value) => dispatch(chooseSystem(value))} 
+                placeholder={"System"}
+                />
+            </div>
+            <div className="col-md-4"></div>
+            </div>
+        </div>
+        );
 
 }
 export default SystemSelector;
