@@ -19,9 +19,9 @@ function App() {
       <PopTrackerNavBar />
       
       <h4 className="number">1) Choose a Line. <TipButton message= {lineTip}/></h4>
-      <div className= "lineBorder">
+      
       <Line />
-      </div>
+    
       <hr />
       <h4 className="number">2) Choose your Station. <TipButton message={stationTip}/></h4>
       <StationSearchbar />
