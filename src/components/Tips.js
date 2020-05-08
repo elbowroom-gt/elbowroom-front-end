@@ -34,8 +34,8 @@ export default class TipButton extends React.Component{
             <div style={{"display":"inline"}}>
             <Darken selected={this.state.selected}/>
                 <Popup trigger={<Button value="?"
-                    style={{'width': 'min(3vw,20px)','height':'min(3vw,20px)',
-                    'borderRadius':"60%",
+                    style={{'width': 'min(5vw,20px)','height':'min(5vw,20px)',
+                    'borderRadius':"50%",
                     'background-color':'light-gray'
                    }}
                     >?</Button>}
@@ -54,10 +54,7 @@ export default class TipButton extends React.Component{
         onClose={()=>this.lighten()} >
             
          <div id="moda"> <div className="content">{this.props.message}</div></div></Popup>
-         </div>    
-          
-             
-            
+         </div>       
            );
 
     }
