@@ -16,7 +16,7 @@ export const transitSlice = createSlice({
             state.selectedDirection = 0;
         },
         chooseLine: (state, action) => {
-            state.selectedLines = action.payload;
+            state.selectedLines = action.payload === state.selectedLines ? null : action.payload;
             state.selectedStation = null;
             state.selectedDirection = 0;
         },
