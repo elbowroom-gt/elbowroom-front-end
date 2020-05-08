@@ -6,5 +6,6 @@
     box-sizing: border-box;
     position: absolute;
     right: 5px;
+    top: 20px;
     border-radius: 1px;
 }
