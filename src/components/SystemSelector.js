@@ -9,8 +9,8 @@ const SystemSelector = function() {
     const system = useSelector(selectSystem);
 
     const systems = [
-        { name: "MTA", value: "MTA" },
-        { name: "MARTA", value: "MARTA" },
+        { label: "MTA", value: "MTA" },
+        { label: "MARTA", value: "MARTA" },
       ];
 
     return (
