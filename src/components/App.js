@@ -16,17 +16,17 @@ function App() {
   return (
     <div className="App">
       <PopTrackerNavBar />
-      <h4 className="number">1) Choose a Line. <TipButton message= {lineTip}/></h4> 
+      <h4 className="number">Choose a Line. <TipButton message= {lineTip}/></h4>
       <Line />
       <hr />
-      <h4 className="number">2) Choose your Station. <TipButton message={stationTip}/></h4>
+      <h4 className="number">Choose your Station. <TipButton message={stationTip}/></h4>
       <StationSearchbar />
       <hr />
-      <h4 className="number">3) Choose your direction of travel. <TipButton message={directionTip}/></h4>
+      <h4 className="number">Choose your direction of travel. <TipButton message={directionTip}/></h4>
       <DirectionSelection />
       <hr />
       <hr />
-      <h4 className="number">4) Upcoming Train Densities. <TipButton message={trainTip}/></h4>
+      <h4 className="number">Upcoming Train Densities. <TipButton message={trainTip}/></h4>
       <TrainView />
       
     </div>

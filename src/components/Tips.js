@@ -36,7 +36,9 @@ export default class TipButton extends React.Component{
                 <Popup trigger={<Button value="?"
                     style={{'width': 'min(5vw,20px)','height':'min(5vw,20px)',
                     'borderRadius':"50%",
-                    'background-color':'light-gray'
+                    'background-color':'light-gray',
+                    "border":"1px solid gray",
+                    "fontSize": "90%"
                    }}
                     >?</Button>}
                     
