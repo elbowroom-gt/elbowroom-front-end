@@ -17,11 +17,8 @@ function App() {
     <div className="App">
       {/* <img src={backgroundImg} alt="background" className="backgroundImg" /> */}
       <PopTrackerNavBar />
-      
-      <h4 className="number">1) Choose a Line. <TipButton message= {lineTip}/></h4>
-      
+      <h4 className="number">1) Choose a Line. <TipButton message= {lineTip}/></h4> 
       <Line />
-    
       <hr />
       <h4 className="number">2) Choose your Station. <TipButton message={stationTip}/></h4>
       <StationSearchbar />
