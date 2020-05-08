@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const transitSlice = createSlice({
     name: "transit",
     initialState: {
-        selectedSystem: null,
+        selectedSystem: "MARTA",
         selectedLines: null,
         selectedStation: null,
         selectedDirection: 0,
@@ -39,5 +39,7 @@ export const selectSystem = state => state.transit.selectedSystem;
 export const selectLine = state => state.transit.selectedLines;
 export const selectStation = state => state.transit.selectedStation;
 export const selectDirection = state => state.transit.selectedDirection;
+
+
 
 export default transitSlice.reducer;

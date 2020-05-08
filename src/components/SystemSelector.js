@@ -1,17 +1,17 @@
 import React from "react";
+import "../css/StationSearchbar.css";
 import "../css/SystemSelector.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseSystem, selectSystem } from '../app/appstateSlice';
-import Select from 'react-select';
+import SelectSearch from 'react-select-search';
 
 const SystemSelector = function() {
-
     const dispatch = useDispatch();
     const system = useSelector(selectSystem);
 
     const systems = [
-        { label: "MTA", value: 1 },
-        { label: "MARTA", value: 2 },
+        { name: "MTA", value: "MTA" },
+        { name: "MARTA", value: "MARTA" },
       ];
 
     return (
@@ -20,10 +20,11 @@ const SystemSelector = function() {
             <div className="row">
             <div className="col-md-4"></div>
             <div className="col-md-4">
-                <Select 
+                <SelectSearch
+                id="selector"
                 options={ systems }  
                 onChange={(value) => dispatch(chooseSystem(value))} 
-                placeholder={"System"}
+                placeholder={ system }
                 />
             </div>
             <div className="col-md-4"></div>
@@ -31,5 +32,6 @@ const SystemSelector = function() {
         </div>
         );
 
-}
+} 
+
 export default SystemSelector;
