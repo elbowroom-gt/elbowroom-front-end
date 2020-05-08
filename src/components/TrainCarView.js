@@ -10,13 +10,7 @@ class TrainCarView extends Component {
         </p>
         <div className="train">
           {this.props.cars.map((e) => {
-            // Green = (89, 183, 58)
-            // Red = (175, 25, 22)
-            // const color = `rgb(${89 * ((100 - e) / 100) + 175 * (e / 100)},${
-            //   183 * ((100 - e) / 100) + 25 * (e / 100)
-            // },${58 * ((100 - e) / 100) + 22 * (e / 100)})`;
-
-            // light green = (191, 255, 236)
+            // white = (255, 255, 255)
             // dark blue = (15, 36, 70)
             const color = `rgb(${255 * ((100 - e) / 100) + 15 * (e / 100)},${
               255 * ((100 - e) / 100) + 36 * (e / 100)
