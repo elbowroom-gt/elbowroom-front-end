@@ -1,17 +1,26 @@
-import React, { Component } from "react";
+import React from "react";
 import "../css/PopTrackerNavBar.css";
+import SystemSelector from "./SystemSelector.js";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/Navdropdown";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
 
-class PopTrackerNavBar extends Component {
-  render() {
-    return (
-      <nav>
-        <img src="../images/logo.svg" alt="logo" />
-        <h1 className="name">
-          p<span className="o">o</span>pTracker
-        </h1>
-      </nav>
-    );
-  }
+
+const PopTrackerNavBar = function() {
+  return (
+    // <Navbar bg="light" expand="lg" className="navBar">
+    //   <Navbar.Brand>Elbow Room</Navbar.Brand>
+    //   <NavDropdown drop="left" className="dropdown" id="basic-navbar-nav">
+    //     <SystemSelector /> 
+    //   </NavDropdown>     
+		// </Navbar>
+    <div className="navBar">
+      Elbow Room
+      <SystemSelector />
+    </div>
+  );
 }
 
 export default PopTrackerNavBar;

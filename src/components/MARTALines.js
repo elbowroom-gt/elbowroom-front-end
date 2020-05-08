@@ -1,25 +1,25 @@
 const MARTALines = [{
     name: 'Red',
     color: '#EC2527',
-    direction: ["North", "South"],
+    direction: ["Northbound", "Southbound"],
     displayName: ''
 },
  {
     name: 'Green',
     color: '#69BD47',
-    direction: ["East", "West"],
+    direction: ["Eastbound", "Westbound"],
     displayName: ''
  },
  {
     name: 'Blue',
     color: '#0093D0',
-    direction: ["East", "West"],
+    direction: ["Eastbound", "Westbound"],
     displayName: ''
 },
  {
     name: 'Gold',
     color: '#FFA500',
-    direction: ["North", "South"],
+    direction: ["Northbound", "Southbound"],
     displayName: ''
  }    
 ]

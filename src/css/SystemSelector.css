@@ -1,0 +1,10 @@
+.select {
+    width: 150px;
+    position: relative;
+    margin-bottom: auto;
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+    position: absolute;
+    right: 5px;
+    border-radius: 1px;
+}

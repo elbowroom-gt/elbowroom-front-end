@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TrainCarView from "./TrainCarView";
 import "../css/TrainView.css";
+import { useSelector } from 'react-redux';
+import { selectDirection, selectLine, selectStation } from '../app/appstateSlice';
 
 let trains = [
   {
@@ -29,36 +31,36 @@ let trains = [
   },
 ];
 
-// trains = [];
+function TrainView() {
+  const current_line = useSelector(selectLine);
+  const current_station = useSelector(selectStation);
+  const current_direction = useSelector(selectDirection);
+  
+  return (
+    <div style={{"opacity": current_line === null || current_station === null || current_direction === 0 ? "0" : "1"}} >
+      {/* <p className="summary">Travelling (West) on the (Green) line from (Midtown) station.<br/></p> */}
 
-class TrainView extends Component {
-  render() {
-    return (
-      <div>
-        {/* <p className="summary">Travelling (West) on the (Green) line from (Midtown) station.<br/></p> */}
-
-        <p className="legendTitle">Train car density scale:</p>
-        <div className="legend">
-            {/* dark blue = (15, 36, 70) */}
-            {[0, 20, 40, 60, 80, 100].map((e) => {
-            const color = `rgb(${255 * ((100 - e) / 100) + 15 * (e / 100)},${
-              255 * ((100 - e) / 100) + 36 * (e / 100)
-            },${255 * ((100 - e) / 100) + 70 * (e / 100)})`;
-            return (
-              <div className="legendItem" style={{ backgroundColor: color }}>
-                {e}
-              </div>
-            );
-          })}
-        </div>
-        <div className="trainViewMain">
-          {trains.map((e) => {
-            return <TrainCarView {...e} />;
-          })}
-        </div>
+      <p className="legendTitle">Train car density scale:</p>
+      <div className="legend">
+          {/* dark blue = (15, 36, 70) */}
+          {[0, 20, 40, 60, 80, 100].map((e) => {
+          const color = `rgb(${255 * ((100 - e) / 100) + 15 * (e / 100)},${
+            255 * ((100 - e) / 100) + 36 * (e / 100)
+          },${255 * ((100 - e) / 100) + 70 * (e / 100)})`;
+          return (
+            <div className="legendItem" style={{ backgroundColor: color }}>
+              {e}
+            </div>
+          );
+        })}
       </div>
-    );
-  }
+      <div className="trainViewMain">
+        {trains.map((e) => {
+          return <TrainCarView {...e} />;
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default TrainView;

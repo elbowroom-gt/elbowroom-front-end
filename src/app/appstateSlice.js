@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const transitSlice = createSlice({
     name: "transit",
     initialState: {
-        selectedSystem: null,
+        selectedSystem: "MARTA",
         selectedLines: null,
         selectedStation: null,
         selectedDirection: 0,
@@ -16,7 +16,7 @@ export const transitSlice = createSlice({
             state.selectedDirection = 0;
         },
         chooseLine: (state, action) => {
-            state.selectedLines = action.payload;
+            state.selectedLines = action.payload === state.selectedLines ? null : action.payload;
             state.selectedStation = null;
             state.selectedDirection = 0;
         },
@@ -25,8 +25,7 @@ export const transitSlice = createSlice({
             state.selectedDirection = 0;
         },
         chooseDirection: (state, action) => {
-            state.selectedDirection = 0;
-            state.selectedDirection += action.payload;
+            state.selectedDirection = action.payload === state.selectedDirection ? 0 : action.payload;
         }
     }
 });
@@ -39,5 +38,7 @@ export const selectSystem = state => state.transit.selectedSystem;
 export const selectLine = state => state.transit.selectedLines;
 export const selectStation = state => state.transit.selectedStation;
 export const selectDirection = state => state.transit.selectedDirection;
+
+
 
 export default transitSlice.reducer;
