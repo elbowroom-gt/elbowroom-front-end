@@ -13,7 +13,7 @@ const PopTrackerNavBar = function() {
   return (
     <div className="navBar">
       <img src={ logo } alt="logo" className="logo" />
-      <div className="name">Elbow Room</div>
+      <h1 className="name">elbowroom</h1>
       <SystemSelector />
     </div>
   );

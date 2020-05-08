@@ -6,6 +6,7 @@
   justify-content: left;
   box-shadow: 0 1px 1em rgb(134, 134, 134);
   margin-bottom: 10px; 
+  background-color: rgb(241, 241, 241);
 }
 
 .logo{
@@ -13,6 +14,16 @@
   padding: 10px;
 }
 
-.name{
-  padding: 5px;
+.name {
+  font-size: 30px;
+  background-color: #5ebdc9;
+  background-image: linear-gradient(45deg, #5ebdc9, #70d6b8);
+
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }

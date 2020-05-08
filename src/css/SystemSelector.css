@@ -1,8 +1,9 @@
 .select {
-    width: 150px;
+    width: 100px;
     position: relative;
     margin-bottom: auto;
     font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
     box-sizing: border-box;
     position: absolute;
     right: 5px;
