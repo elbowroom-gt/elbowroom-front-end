@@ -65,7 +65,7 @@ function renderStationMTA(props, option, snapshot, className) {
                               "height": "20px",
                               "padding": "0.1em",
                               "float": "right"}}>
-        {element.name}
+        {element.displayName}
         </div>);
     }
   });
@@ -95,13 +95,15 @@ const StationSearch = function() {
     stations = MARTAStations;
   }
 
-  return <SelectSearch 
-          options={stations.filter((station) => station.lines.includes(current_line))}
-          placeholder={"Select a station"}
-          search
-          onChange={(value) => dispatch(chooseStation(value))}
-          renderOption={system === "MTA" ? renderStationMTA : renderStationMARTA}>
-        </SelectSearch>
+  return <div style={{"opacity": current_line === null ? ".25" : "1"}}>
+          <SelectSearch 
+            options={stations.filter((station) => station.lines.includes(current_line))}
+            placeholder={"Select a station"}
+            search
+            onChange={(value) => dispatch(chooseStation(value))}
+            renderOption={system === "MTA" ? renderStationMTA : renderStationMARTA}>
+          </SelectSearch>
+        </div>
 }
 
 export default StationSearch;

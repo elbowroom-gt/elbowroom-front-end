@@ -10,7 +10,7 @@ import backgroundImg from "../images/backgroundSubway.jpeg";
 function App() {
   return (
     <div className="App">
-      <img src={backgroundImg} alt="background" className="backgroundImg" />
+      {/* <img src={backgroundImg} alt="background" className="backgroundImg" /> */}
       <PopTrackerNavBar />
       <h4 className="number">1) Choose a Line.</h4>
       <Line />
@@ -24,6 +24,7 @@ function App() {
       <hr />
       <h4 className="number">4) Upcoming Train Densities.</h4>
       <TrainView />
+      
     </div>
   );
 }
