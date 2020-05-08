@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/StationSearchbar.css";
 import "../css/SystemSelector.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseSystem, selectSystem } from '../app/appstateSlice';
@@ -22,6 +21,7 @@ const SystemSelector = function() {
             <div className="col-md-4">
                 <SelectSearch
                 id="selector"
+                className="systemSelector"
                 options={ systems }  
                 onChange={(value) => dispatch(chooseSystem(value))} 
                 placeholder={ system }

@@ -22,8 +22,9 @@
 }
 
 .select-search {
-    width: 300px;
+    width: 292px;
     position: relative;
+    margin-top: 10px;
     margin-bottom: 20px;
     font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
@@ -73,7 +74,7 @@
         background: #fff;
         border: none;
         box-shadow: 0 .0625rem .125rem rgba(0, 0, 0, 0.15);
-        border-radius: 3px;
+        border-radius: 12px;
         outline: none;
         font-family: 'Noto Sans', sans-serif;
         font-size: 14px;
@@ -102,7 +103,7 @@
     }
 
     .select-search__input:hover {
-        border-color: #2FCC8B;
+        border-color: rgb(68, 174, 216);
     }
 
     .select-search__input:not([readonly]):focus {
@@ -159,7 +160,7 @@
     }
 
     .select-search__option.is-selected {
-        background: #2FCC8B;
+        background: rgb(68, 174, 216);
         color: #fff;
     }
 

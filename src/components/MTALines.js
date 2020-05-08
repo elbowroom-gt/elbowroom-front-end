@@ -84,6 +84,18 @@ const MTALines = [
         displayName: "R"
     },
     {
+        name: "0",
+        color: "#808183",
+        direction: ["Uptown", "Downtown"],
+        displayName: "S"
+    },
+    {
+        name: "H",
+        color: "#808183",
+        direction: ["Uptown", "Downtown"],
+        displayName: "S"
+    },
+    {
         name: "S",
         color: "#808183",
         direction: ["Uptown", "Downtown"],
