@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import TrainCarView from "./TrainCarView";
 import "../css/TrainView.css";
 import { useSelector } from 'react-redux';

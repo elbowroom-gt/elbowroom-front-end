@@ -5,14 +5,12 @@ import DirectionSelection from "./DirectionSelection";
 import Line from "./Line";
 import TrainView from "./TrainView";
 import "../css/App.css";
-import backgroundImg from "../images/backgroundSubway.jpeg";
 import TipButton from "./Tips";
 import "../css/tips.css";
 
 
 function App() {
 
-  
   return (
     <div className="App">
       <PopTrackerNavBar />
