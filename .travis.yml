@@ -17,3 +17,6 @@ deploy:
   skip_cleanup: true
   local_dir: build
   region: "us-west-2"
+  on:
+    - master
+    - prod
