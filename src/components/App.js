@@ -21,7 +21,6 @@ function App() {
       <h4 className="number">Choose a Line. <TipButton message= {lineTip}/></h4>
       
       <Line />
-    
       <hr />
       <h4 className="number">Choose your Station. <TipButton message={stationTip}/></h4>
       <StationSearchbar />
