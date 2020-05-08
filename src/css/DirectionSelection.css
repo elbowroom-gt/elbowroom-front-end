@@ -23,13 +23,13 @@
 }
 
 .selectedButton:active {
-    background-color: lightblue;
+    background-color: white;
     box-shadow: 0 8px 16px 0 rgba(206, 206, 206, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     transform: translateY(4px);
 }
 
 .selectedButton {
-    background-color: rgb(134, 197, 206);
+    background-color: white;
     border: blueviolet;
     color: black;
     padding: 15px  ;

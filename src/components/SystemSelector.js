@@ -2,7 +2,7 @@ import React from "react";
 import "../css/SystemSelector.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { chooseSystem, selectSystem } from '../app/appstateSlice';
-import SelectSearch from 'react-select-search';
+import Select from 'react-select';
 
 const SystemSelector = function() {
     const dispatch = useDispatch();
@@ -19,11 +19,10 @@ const SystemSelector = function() {
             <div className="row">
             <div className="col-md-4"></div>
             <div className="col-md-4">
-                <SelectSearch
-                id="selector"
+                <Select
                 className="systemSelector"
                 options={ systems }  
-                onChange={(value) => dispatch(chooseSystem(value))} 
+                onChange={(value) => dispatch(chooseSystem(value.label))} 
                 placeholder={ system }
                 />
             </div>
