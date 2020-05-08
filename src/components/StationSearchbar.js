@@ -34,12 +34,7 @@ function renderStationMARTA(props, option, snapshot, className) {
 
   MARTALines.forEach(element => {
     if (option.lines.includes(element.name)) {
-      lines.push(<div style={{"background-color": element.color,
-                              "borderRadius": "50%",
-                              "width": "20px",
-                              "height": "20px",
-                              "padding": "0.1em",
-                              "float": "right"}}>
+      lines.push(<div class = "lineBubble" id = "MARTABubble" style={{"background-color": element.color}}>
         </div>);
     }
   });
@@ -54,17 +49,7 @@ function renderStationMTA(props, option, snapshot, className) {
 
   MTALines.forEach(element => {
     if (option.lines.includes(element.name)) {
-      lines.push(<div style={{"background-color": element.color,
-                              "borderRadius": "50%",
-                              "color": "white",
-                              "font-family": "'Helvetica', 'Arial', sans-serif",
-                              "font-size": "90%",
-                              "textAlign": "center",
-                              "verticalAlign": "middle",
-                              "width": "20px",
-                              "height": "20px",
-                              "padding": "0.1em",
-                              "float": "right"}}>
+      lines.push(<div class = "lineBubble" id="MTABubble" style={{"background-color": element.color}}>
         {element.displayName}
         </div>);
     }
