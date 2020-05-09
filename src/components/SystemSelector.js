@@ -9,12 +9,14 @@ const SystemSelector = function() {
     const system = useSelector(selectSystem);
 
     const systems = [
-        { label: "MTA", value: "MTA" },
-        { label: "MARTA", value: "MARTA" },
+        { label: "NYC", value: "MTA" },
+        { label: "ATLANTA", value: "MARTA" },
       ];
+    
+    let city = systems.find(e => e.value === system);
+    city = city === undefined ? "ATLANTA" : city.label;
 
     return (
-
         <div className="select">
             <div className="row">
             <div className="col-md-4"></div>
@@ -22,8 +24,8 @@ const SystemSelector = function() {
                 <Select
                 className="systemSelector"
                 options={ systems }  
-                onChange={(value) => dispatch(chooseSystem(value.label))} 
-                placeholder={ system }
+                onChange={(value) => dispatch(chooseSystem(value.value))} 
+                placeholder={ city }
                 />
             </div>
             <div className="col-md-4"></div>
