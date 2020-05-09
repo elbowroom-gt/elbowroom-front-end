@@ -51,8 +51,8 @@ function TrainView() {
       <div>
         <button id="toggleColorblind" onClick={() => dispatch(toggleColorblindMode())}>
           <div className="legend">
-            {[0, 20, 40, 60, 80, 100].map((e) => {
-              const gradient = colorblind ? gradientHelpers.gradient2 : gradientHelpers.gradient1;
+            {[0, 50, 100].map((e) => {
+              const gradient = gradientHelpers.gradients[colorblind];
               const background_color = gradientHelpers.colorGradient(e/100, gradient.color1, gradient.color2, gradient.color3);
               const text_color = e < 30 && colorblind ? "black" : "white";
 

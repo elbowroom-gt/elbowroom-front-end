@@ -7,7 +7,7 @@ export const transitSlice = createSlice({
         selectedLines: null,
         selectedStation: null,
         selectedDirection: 0,
-        colorblindMode: false
+        colorblindMode: 0
     },
     reducers: {
         chooseSystem: (state, action) => {
@@ -29,7 +29,7 @@ export const transitSlice = createSlice({
             state.selectedDirection = action.payload === state.selectedDirection ? 0 : action.payload;
         },
         toggleColorblindMode: (state) => {
-            state.colorblindMode = !state.colorblindMode;
+            state.colorblindMode = (state.colorblindMode + 1) % 3;
         }
     }
 });

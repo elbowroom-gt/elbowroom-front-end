@@ -28,21 +28,27 @@ function colorGradient(fadeFraction, rgbColor1, rgbColor2, rgbColor3) {
     return 'rgb(' + gradient.red + ',' + gradient.green + ',' + gradient.blue + ')';
 }
 
-const gradient1 = { //red-yellow-green gradient
-    color1: {red: 105, green: 189, blue: 71},
-    color2: {red: 230, green: 230, blue: 0},
-    color3: {red: 236, green: 37, blue: 39}
-}
-
-const gradient2 = { //white-blue colorblind gradient
-    color1: {red: 255, green: 255, blue: 255},
-    color2: {red: 15, green: 36, blue: 70},
-}
+const gradients = [
+    {
+        color1: {red: 105, green: 189, blue: 71},
+        color2: {red: 230, green: 230, blue: 0},
+        color3: {red: 236, green: 37, blue: 39}
+    },
+    {
+        color1: {red: 255, green: 255, blue: 255},
+        color2: {red: 15, green: 36, blue: 70},
+        color3: null
+    },
+    {
+        color1: {red: 255, green: 255, blue: 255},
+        color2: {red: 112, green: 214, blue: 184},
+        color3: null
+    }
+]
 
 const gradientHelpers = {
     colorGradient: colorGradient,
-    gradient1: gradient1,
-    gradient2: gradient2
+    gradients: gradients
 }
 
 module.exports = { gradientHelpers };
