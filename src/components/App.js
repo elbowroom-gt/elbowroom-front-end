@@ -35,8 +35,8 @@ function App() {
 const lineTip = "Click or tap on the line you want to travel on"
 const stationTip = "Click or select the train station you are on. " +
                 "Type the station to narrow down the station list."
-const directionTip = "Click to select wether you are traveling Uptown or Downtown."
+const directionTip = "Click to select direction of travel"
 const trainTip = "Here are the upcoming trains for the line and station you previously selected.\n \n"
                     + "Each train car is represented by a square, and the color of each"
-                    + " square indicates the population density in that train car"
+                    + " square indicates the population density in that train car."
 export default App;
