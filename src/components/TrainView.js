@@ -61,13 +61,13 @@ function TrainView() {
       <div>
         <button id="toggleColorblind" onClick={() => dispatch(toggleColorblindMode())}>
           <div className="legend">
-            {[0, 50, 100].map((e) => {
+            {[0, 25, 50, 75, 100].map((e) => {
               const gradient = gradientHelpers.gradients[colorblind];
               const background_color = gradientHelpers.colorGradient(e/100, gradient.color1, gradient.color2, gradient.color3);
               const text_color = e < 30 && colorblind ? "black" : "white";
 
               return (
-                <div className="legendItem" style={{ backgroundColor: background_color, color: e % 100 === 0 ? text_color : background_color }}>
+                <div className="legendItem" style={{ backgroundColor: background_color, color: e % 50 === 0 ? text_color : background_color }}>
                   {e + "%"}
                 </div>
               );
