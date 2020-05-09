@@ -6,7 +6,7 @@ import "../css/tips.css"
 
 function Darken(props) {
     if(props.selected){
-        console.log(props.selected)
+    
     return <div id="page-mask"></div> 
     
     }
@@ -22,7 +22,7 @@ export default class TipButton extends React.Component{
         ]
     }
     lighten()  {
-        console.log(this.state.selected)
+        
            this.setState({selected: !this.state.selected})
            
         
@@ -50,12 +50,12 @@ export default class TipButton extends React.Component{
         'background-color': '#B1FAFF',
         'color':'black',
         'font':'arial',
-        
+        'textAlign':'justify'
         }}
         onOpen={()=>this.lighten()}
         onClose={()=>this.lighten()} >
             
-         <div id="moda"> <div className="content">{this.props.message}</div></div></Popup>
+         <div id="modal">{this.props.message}</div></Popup>
          </div>       
            );
 

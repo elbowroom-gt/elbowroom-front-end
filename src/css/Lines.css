@@ -11,6 +11,11 @@
 } */
 
 #line-button {
+    border-radius: 50%;
+    border:1.5px solid white;
+    color:white;
+    font-family:Helvetica, Arial, sans-serif;
+    font-size: 110%;
     margin: 11%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
