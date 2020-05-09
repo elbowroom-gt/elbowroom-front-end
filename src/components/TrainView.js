@@ -40,11 +40,21 @@ function TrainView() {
   const current_line = useSelector(selectLine);
   const current_station = useSelector(selectStation);
   const current_direction = useSelector(selectDirection);
+
   const colorblind = useSelector(selectColorBlindMode);
   const dispatch = useDispatch();
   
   return (
-    <div style={{"opacity": current_line === null || current_station === null || current_direction === 0 ? "0" : "1"}} >
+    <div
+      style={{
+        opacity:
+          current_line === null ||
+          current_station === null ||
+          current_direction === 0
+            ? "0"
+            : "1",
+      }}
+    >
       {/* <p className="summary">Travelling (West) on the (Green) line from (Midtown) station.<br/></p> */}
 
       <p className="legendTitle">Train car density scale:</p>
@@ -65,7 +75,6 @@ function TrainView() {
           </div>
         </button>
       </div>
-
       <div className="trainViewMain">
         {trains.map((e) => {
           e.colorblind = colorblind;

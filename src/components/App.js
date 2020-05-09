@@ -8,7 +8,6 @@ import "../css/App.css";
 import TipButton from "./Tips";
 import "../css/tips.css";
 
-
 function App() {
 
   return (
