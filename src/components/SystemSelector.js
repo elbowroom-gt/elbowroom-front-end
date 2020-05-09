@@ -13,8 +13,8 @@ const SystemSelector = function() {
         { label: "ATLANTA", value: "MARTA" },
       ];
     
-    let city = systems.find(system => system.value === system);
-    city = city === undefined ? "ATLANTA" : city;
+    let city = systems.find(e => e.value === system);
+    city = city === undefined ? "ATLANTA" : city.label;
 
     return (
         <div className="select">
