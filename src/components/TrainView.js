@@ -1,8 +1,12 @@
 import React from "react";
 import TrainCarView from "./TrainCarView";
 import "../css/TrainView.css";
-import { useSelector } from 'react-redux';
-import { selectDirection, selectLine, selectStation } from '../app/appstateSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectDirection, 
+         selectLine, 
+         selectStation, 
+         selectColorBlindMode, 
+         toggleColorblindMode } from '../app/appstateSlice';
 import { gradientHelpers } from "./HelperFunctions";
 
 let trains = [
@@ -36,26 +40,35 @@ function TrainView() {
   const current_line = useSelector(selectLine);
   const current_station = useSelector(selectStation);
   const current_direction = useSelector(selectDirection);
+  const colorblind = useSelector(selectColorBlindMode);
+  const dispatch = useDispatch();
   
   return (
     <div style={{"opacity": current_line === null || current_station === null || current_direction === 0 ? "0" : "1"}} >
       {/* <p className="summary">Travelling (West) on the (Green) line from (Midtown) station.<br/></p> */}
 
       <p className="legendTitle">Train car density scale:</p>
-      <div className="legend">
-          {/* dark blue = (15, 36, 70) */}
-          {[0, 20, 40, 60, 80, 100].map((e) => {
-          const gradient = gradientHelpers.gradient1;
-          const color = gradientHelpers.colorGradient(e/100, gradient.color1, gradient.color2, gradient.color3);
-          return (
-            <div className="legendItem" style={{ backgroundColor: color, color: e % 100 === 0 ? "white" : color }}>
-              {e + "%"}
-            </div>
-          );
-        })}
+      <div>
+        <button id="toggleColorblind" onClick={() => dispatch(toggleColorblindMode())}>
+          <div className="legend">
+            {[0, 20, 40, 60, 80, 100].map((e) => {
+              const gradient = colorblind ? gradientHelpers.gradient2 : gradientHelpers.gradient1;
+              const background_color = gradientHelpers.colorGradient(e/100, gradient.color1, gradient.color2, gradient.color3);
+              const text_color = e < 30 && colorblind ? "black" : "white";
+
+              return (
+                <div className="legendItem" style={{ backgroundColor: background_color, color: e % 100 === 0 ? text_color : background_color }}>
+                  {e + "%"}
+                </div>
+              );
+            })}
+          </div>
+        </button>
       </div>
+
       <div className="trainViewMain">
         {trains.map((e) => {
+          e.colorblind = colorblind;
           return <TrainCarView {...e} />;
         })}
       </div>
