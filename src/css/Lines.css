@@ -17,7 +17,7 @@
 
 .lineButton:active {
     box-shadow: 0 8px 16px 0 rgba(255, 253, 253, 0.685), 0 6px 20px 0 rgba(158, 158, 158, 0.582);
-    transform: translateY(2px);
+    transform: translateY(3px);
 }
 
 .lineButton:focus {
