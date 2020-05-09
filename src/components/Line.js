@@ -23,6 +23,7 @@ const Line = function() {
     lines.forEach(element => arr.push(
         <Button 
             id="line-button"
+            className = "lineButton"
             onClick = {() => dispatch(chooseLine(element.name))} 
             style={{ "background-color":  element.color, 
                     "opacity": (current_line !== null && current_line !== element.name) ? 0.5 : 1}}>
