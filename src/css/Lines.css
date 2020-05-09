@@ -5,7 +5,7 @@
     margin-bottom: 15px;
 }
 
-#line-button {
+.lineButton {
     margin: 11%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 50%;
@@ -22,4 +22,24 @@
 
 .lineButton:focus {
     box-shadow: 0 4px 4px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(255, 255, 255);
+}
+
+.confirmLineButton {
+    margin-top: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    border: 1px solid gray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%;
+}
+
+.divide{
+    height: 20px;
+}
+
+.hrule{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    opacity: 50%;
 }
