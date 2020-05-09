@@ -7,6 +7,7 @@ export const transitSlice = createSlice({
         selectedLines: null,
         selectedStation: null,
         selectedDirection: 0,
+        colorblindMode: 0
     },
     reducers: {
         chooseSystem: (state, action) => {
@@ -26,18 +27,22 @@ export const transitSlice = createSlice({
         },
         chooseDirection: (state, action) => {
             state.selectedDirection = action.payload === state.selectedDirection ? 0 : action.payload;
+        },
+        toggleColorblindMode: (state) => {
+            state.colorblindMode = (state.colorblindMode + 1) % 3;
         }
     }
 });
 
 
-export const {chooseSystem, chooseLine, chooseStation, chooseDirection} = transitSlice.actions;
+export const {chooseSystem, chooseLine, chooseStation, chooseDirection, toggleColorblindMode} = transitSlice.actions;
 
 //These are selectors, they allow us to easily select a value from the state
 export const selectSystem = state => state.transit.selectedSystem;
 export const selectLine = state => state.transit.selectedLines;
 export const selectStation = state => state.transit.selectedStation;
 export const selectDirection = state => state.transit.selectedDirection;
+export const selectColorBlindMode = state => state.transit.colorblindMode;
 
 
 

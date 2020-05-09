@@ -44,3 +44,12 @@
 .legendItem:last-child {
   margin-right: 0.5em;
 }
+
+#toggleColorblind {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  width: auto;
+  float: right;
+  /* display: flex;
+  flex-direction: column; */
+}
