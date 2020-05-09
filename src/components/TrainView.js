@@ -3,6 +3,7 @@ import TrainCarView from "./TrainCarView";
 import "../css/TrainView.css";
 import { useSelector } from 'react-redux';
 import { selectDirection, selectLine, selectStation } from '../app/appstateSlice';
+import { gradientHelpers } from "./HelperFunctions";
 
 let trains = [
   {
@@ -44,12 +45,11 @@ function TrainView() {
       <div className="legend">
           {/* dark blue = (15, 36, 70) */}
           {[0, 20, 40, 60, 80, 100].map((e) => {
-          const color = `rgb(${255 * ((100 - e) / 100) + 15 * (e / 100)},${
-            255 * ((100 - e) / 100) + 36 * (e / 100)
-          },${255 * ((100 - e) / 100) + 70 * (e / 100)})`;
+          const gradient = gradientHelpers.gradient1;
+          const color = gradientHelpers.colorGradient(e/100, gradient.color1, gradient.color2, gradient.color3);
           return (
-            <div className="legendItem" style={{ backgroundColor: color }}>
-              {e}
+            <div className="legendItem" style={{ backgroundColor: color, color: e % 100 === 0 ? "white" : color }}>
+              {e + "%"}
             </div>
           );
         })}

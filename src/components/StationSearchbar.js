@@ -29,27 +29,13 @@ function compareStations(a, b) {
   }
 }
 
-function renderStationMARTA(props, option, snapshot, className) {
+function renderStationOption(props, option, snapshot, className) {
   let lines = [];
+  const allLines = option.system === "MTA" ? MTALines : MARTALines; 
 
-  MARTALines.forEach(element => {
+  allLines.forEach(element => {
     if (option.lines.includes(element.name)) {
-      lines.push(<div class = "lineBubble" id = "MARTABubble" style={{"background-color": element.color}}>
-        </div>);
-    }
-  });
-
-  return <button {...props} className={className} type="button" style={{"width": "100%"}}>
-          {option.name}{lines}
-        </button>
-}
-
-function renderStationMTA(props, option, snapshot, className) {
-  let lines = [];
-
-  MTALines.forEach(element => {
-    if (option.lines.includes(element.name)) {
-      lines.push(<div class = "lineBubble" id="MTABubble" style={{"background-color": element.color}}>
+      lines.push(<div class = "lineBubble" style={{"background-color": element.color}}>
         {element.displayName}
         </div>);
     }
@@ -72,11 +58,20 @@ const StationSearch = function() {
       stations.push({
         name: element[10],
         value: element[9],
-        lines: element[12].split("-").map(x => x.substring(0,1))
+        lines: element[12].split("-").map(x => x.substring(0,1)),
+        system: "MTA"
       })
     });
     stations.sort((a,b) => compareStations(a,b));
   } else {
+    MARTAStations.forEach(element => {
+      stations.push({
+        name: element.name,
+        value: element.value,
+        lines: element.lines,
+        system: "MARTA"
+      })
+    });
     stations = MARTAStations;
   }
 
@@ -87,7 +82,7 @@ const StationSearch = function() {
             placeholder={"Select a station"}
             search
             onChange={(value) => dispatch(chooseStation(value))}
-            renderOption={system === "MTA" ? renderStationMTA : renderStationMARTA}>
+            renderOption={renderStationOption}>
           </SelectSearch>
         </div>
 }
