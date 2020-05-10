@@ -34,3 +34,8 @@ p {
 .car:first-child {
   border-top-left-radius: 100%;
 }
+
+.legendTitle {
+  color: grey;
+  font-weight: 300;
+}

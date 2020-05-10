@@ -23,7 +23,7 @@ const Line = function () {
   lines.forEach((element) =>
     arr.push(
       <Button
-        id="line-button"
+        className = "lineButton"
         onClick={() => {
           dispatch(chooseLine(element.name));
         }}
@@ -67,17 +67,21 @@ const Line = function () {
         </div>
         <Button
           id="line-button"
+          className="confirmLineButton"
           disabled={true}
           style={{
             "background-color": extra.color,
             width: "min(11vw,80px)",
             height: "min(11vw, 80px)",
             marginLeft: "43%",
-            marginRight: "auto",
+            marginRight: "auto"
           }}
         >
           {extra.name}
         </Button>
+        <div className="divide">
+          <hr className="hrule" />
+        </div>
       </div>
     );
   }

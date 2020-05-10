@@ -10,20 +10,11 @@
 }
 
 .logo{
-  max-height: 40px;
-  padding: 10px;
+  max-height: 35px;
+  padding: 8px;
 }
 
 .name {
   font-size: 30px;
-  background-color: #5ebdc9;
-  background-image: linear-gradient(45deg, #5ebdc9, #70d6b8);
-
-  background-size: 100%;
-  background-repeat: repeat;
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  color: #3ECA8E;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/PopTrackerNavBar.css";
 import SystemSelector from "./SystemSelector.js";
-import logo from "../images/elbowroomIcon3.png"
+import logo from "../images/erL.png"
 
 
 const PopTrackerNavBar = function () {
